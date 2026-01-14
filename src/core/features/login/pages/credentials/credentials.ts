@@ -11,7 +11,7 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-
+const PAUSE_SITE_CHECK = true; // 🔁 mettre false pour réactiver
 import { Component, OnInit, OnDestroy, ElementRef, inject, viewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Subscription } from 'rxjs';
@@ -104,7 +104,7 @@ export default class CoreLoginCredentialsPage implements OnInit, OnDestroy {
         try {
             this.siteCheck = CoreNavigator.getRouteParam<CoreSiteCheckResponse>('siteCheck');
 
-            const siteUrl = this.siteCheck?.siteUrl || CoreNavigator.getRequiredRouteParam<string>('siteUrl');
+            const siteUrl = this.siteCheck?.siteUrl || CoreNavigator.getRequiredRouteParam<string>('siteUrl') || '';
             if (this.siteCheck?.config) {
                 this.siteConfig = this.siteCheck.config;
             }
@@ -124,7 +124,15 @@ export default class CoreLoginCredentialsPage implements OnInit, OnDestroy {
             password: ['', Validators.required],
         });
 
-        await this.checkSite();
+        if (!PAUSE_SITE_CHECK) {
+            await this.checkSite();
+        } else {
+            // Mode pause : on affiche le formulaire sans vérification serveur
+            this.pageLoaded = true;
+            this.showLoginForm = true;
+            this.isBrowserSSO = false;
+            this.siteCheckError = '';
+        }
 
         if (this.isBrowserSSO && CoreLoginHelper.shouldSkipCredentialsScreenOnSSO()) {
             const launchedWithTokenURL = await CoreCustomURLSchemes.appLaunchedWithTokenURL();

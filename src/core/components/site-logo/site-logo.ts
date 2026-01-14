@@ -66,7 +66,7 @@ export class CoreSiteLogoComponent implements OnInit, OnDestroy {
             await this.loadInfo();
         }, this.siteId);
 
-        this.fallbackLogo = this.logoType === 'top' ? 'assets/img/top_logo.png' : 'assets/img/login_logo.png';
+        this.fallbackLogo = this.logoType === 'top' ? 'assets/img/logo.png' : 'assets/img/logo.png';
         this.showSiteName = this.logoType !== 'top';
 
         await this.loadInfo();

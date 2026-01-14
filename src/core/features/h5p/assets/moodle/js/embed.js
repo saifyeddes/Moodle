@@ -294,7 +294,7 @@ document.onreadystatechange = async() => {
     H5P.trigger(instance, 'resize');
 };
 
-// Function created for the Moodle app.
+// Function created for the Moodle App.
 // It also takes the current body margin into account because some user agents put some margin to the body of the outer iframe.
 function getIframeBodyHeights(iFrame) {
     var margin = parseInt(getComputedStyle(document.body)['margin'], 10) || 0;

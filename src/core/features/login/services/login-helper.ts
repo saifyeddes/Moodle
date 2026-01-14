@@ -983,7 +983,7 @@ export class CoreLoginHelperProvider {
     }
 
     /**
-     * Show a modal warning the user that he should use the current Moodle app.
+     * Show a modal warning the user that he should use the current Moodle App.
      *
      * @param message The warning message.
      */

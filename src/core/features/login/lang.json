@@ -12,7 +12,7 @@
     "confirmdeletesite": "Are you sure you want to remove the account on {{sitename}}?",
     "connect": "Connect!",
     "connecttomoodle": "Connect to Moodle",
-    "connecttomoodleapp": "You are trying to connect to a regular Moodle site. Please download the official Moodle app to access this site.",
+    "connecttomoodleapp": "You are trying to connect to a regular Moodle site. Please download the official Moodle App to access this site.",
     "connecttoworkplaceapp": "You are trying to connect to a Moodle Workplace site. Please download the Moodle Workplace app to access this site.",
     "createaccount": "Create my new account",
     "credentialsdescription": "Please provide your username and password to log in.",

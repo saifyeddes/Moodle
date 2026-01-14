@@ -46,7 +46,15 @@ export class AppComponent implements OnInit, AfterViewInit {
     /**
      * @inheritdoc
      */
-    ngOnInit(): void {
+    async ngOnInit(): Promise<void> {
+        // Rediriger directement vers la page de connexion
+        await CoreNavigator.navigate('/login/credentials', {
+            reset: true,
+            params: {
+                siteUrl: '',
+            },
+        });
+
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         const win = <any> window;
 

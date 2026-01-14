@@ -39,7 +39,7 @@ if (document.documentElement.requestFullscreen) {
   H5P.fullScreenBrowserPrefix = '';
 }
 else if (document.documentElement.webkitRequestFullScreen) {
-  // This code has been changed to allow full screen in Moodle app.
+  // This code has been changed to allow full screen in Moodle App.
   H5P.fullScreenBrowserPrefix = 'webkit';
   H5P.safariBrowser = 0;
   // H5P.safariBrowser = navigator.userAgent.match(/version\/([.\d]+)/i);
@@ -56,7 +56,7 @@ else if (document.documentElement.mozRequestFullScreen) {
 else if (document.documentElement.msRequestFullscreen) {
   H5P.fullScreenBrowserPrefix = 'ms';
 } else if (isIOS()) {
-  // This code has been added to allow a "fake" full screen in Moodle app.
+  // This code has been added to allow a "fake" full screen in Moodle App.
   H5P.fullScreenBrowserPrefix = 'webkit';
   H5P.safariBrowser = 0;
   useFakeFullScreen = true;
