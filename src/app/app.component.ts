@@ -51,7 +51,7 @@ export class AppComponent implements OnInit, AfterViewInit {
         await CoreNavigator.navigate('/login/credentials', {
             reset: true,
             params: {
-                siteUrl: '',
+                siteUrl: 'https://demo.sit.com.tn/',
             },
         });
 

@@ -27,3 +27,9 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+subprojects {
+    configurations.all {
+        exclude group: "com.android.support", module: "support-v4"
+    }
+}
