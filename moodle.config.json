@@ -93,7 +93,6 @@
     "onlyallowlistedsites": false,
     "forcedefaultlanguage": false,
     "privacypolicy": "https://moodle.net/moodle-app-privacy/",
-    //"notificoncolor": "#f98012",
     "notificoncolor": "#086073",
     "enableanalytics": false,
     "enableonboarding": true,
@@ -115,26 +114,11 @@
     },
     "disableTokenFile": false,
     "iconsPrefixes": {
-        "font-awesome": {
-            "brands": [
-                "fab"
-            ],
-            "regular": [
-                "far"
-            ],
-            "solid": [
-                "fa",
-                "fas"
-            ]
-        },
-        "moodle": {
-            "font-awesome": [
-                "fam"
-            ],
-            "moodle": [
-                "moodle"
-            ]
-        }
+    "font-awesome": {
+        "brands": ["fab"],
+        "regular": ["far"],
+        "solid": ["fa", "fas"]
+    }
     },
     "clearIABSessionWhenAutoLogin": "android",
     "collapsibleItemsExpanded": false

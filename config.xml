@@ -3,6 +3,7 @@
     <name>Moodle</name>
     <description>Moodle official app</description>
     <author email="mobile@moodle.com" href="http://moodle.com">Moodle Mobile team</author>
+    <plugin name="cordova-plugin-moodleapp" spec="./cordova-plugin-moodleapp" />
     <content src="index.html" />
     <access origin="*" />
     <access launch-external="yes" origin="tel:*" />
